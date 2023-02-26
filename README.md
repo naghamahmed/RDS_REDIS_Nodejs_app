@@ -83,10 +83,41 @@ Exec to the jenkins master image
 $ docker exec -it acd16c7122a4 bash
 ```
 ![Screenshot from 2023-02-26 06-58-42](https://user-images.githubusercontent.com/110065223/221399321-4415e390-63e6-4413-a5b4-9a890cf45cc8.png)
+In Jenkins-Master image
+```
+$ export AWS_ACCESS_KEY_ID="aws access key"
+```
+```
+$ export AWS_ACCESS_SECRET_KEY_ID="aws secret key"
+```
+```
+$ cd /var/jenkins_home/workspace/Database/
+```
+```
+$ terraform output RDS_PASSWORD
+```
+Copying thr RDS_PASSWORD
 
 ## <front size="20"> **Jenkins Dashboard** </front>
 Dashboard > Manage Jenkins > Manage nodes and clouds  + Add Node
 ![Screenshot from 2023-02-26 07-05-49](https://user-images.githubusercontent.com/110065223/221399208-7336bdda-9953-40e1-a0fc-aa3078ae9a1b.png)
 ![Screenshot from 2023-02-26 07-07-01](https://user-images.githubusercontent.com/110065223/221399343-639590e2-d9a7-48b3-80aa-3e7b4c9cf21d.png)
+
+## <front size="20"> **RDS-REDIS Pipleline** </front>
+Adding RDS Credentials 
+Adding DockerHub Credentials
+![Screenshot from 2023-02-26 09-48-40](https://user-images.githubusercontent.com/110065223/221400081-60881610-a95c-497e-ba91-8b4fe58e6da0.png)
+
+```
+$ cd ./Jenkins-App/Jenkinsfile
+```
+![Screenshot from 2023-02-26 09-48-40](https://user-images.githubusercontent.com/110065223/221400160-7ca1edcd-ea3c-45e8-a3df-be1267be7e04.png)
+
+## <front size="20"> **Expose the app using ALB** </front>
+
+![Screenshot from 2023-02-26 07-49-45](https://user-images.githubusercontent.com/110065223/221400209-e51e27f2-56eb-40f6-9b38-35bb5db1967f.png)
+
+![Screenshot from 2023-02-26 07-45-15](https://user-images.githubusercontent.com/110065223/221400210-26d4a21c-7ed2-484c-8334-0cd7b67a8b08.png)
+
 
 
