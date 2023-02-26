@@ -40,6 +40,15 @@ Adding AWS credentials in secret text
     
 ![Screenshot from 2023-02-26 09-23-41](https://user-images.githubusercontent.com/110065223/221398350-430af5e2-607b-449f-926b-662d456847c7.png)
 
+## <front size="20"> **Jenkins parameterized pipeline** </front>
+```
+$ cat Jenkins-TF/Jenkinsfile
+```
+![Screenshot from 2023-02-26 09-46-19](https://user-images.githubusercontent.com/110065223/221398556-a7ad9b22-48cc-4c66-92b0-fccf0021ab8c.png)
+
+
+
+
 
 
 
