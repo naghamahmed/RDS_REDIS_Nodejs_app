@@ -22,7 +22,7 @@ $ cd ./Jenkins-TF
 $ docker build -t jenkins:v1
 ```
 ```
-$ docker run -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker
+$ docker run -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock jenkins:v1
 ```
 
 ## <front size="20"> **Jenkins Master** </front>
