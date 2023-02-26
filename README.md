@@ -15,7 +15,13 @@
 
 ## <font size=”20”> **Jenkins Pipeline for Aplly Terrraform** </font>
 
-$ cd Jenkins-TF @github/clipboard-copy-element
-$ docker build -t jenkins:v1 @github/clipboard-copy-element
-$ docker run -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker @github/clipboard-copy-element
+```
+$ cd Jenkins-TF
+```
+```
+$ docker build -t jenkins:v1
+```
+```
+$ docker run -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker
+```
 
