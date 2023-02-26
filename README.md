@@ -80,7 +80,7 @@ $ ansible-playbook -i hosts main.yml
 
 Exec to the jenkins master image 
 ```
-$ docker exec -it acd16c7122a4 bash
+$ docker exec -it $container_id bash
 ```
 ![Screenshot from 2023-02-26 06-58-42](https://user-images.githubusercontent.com/110065223/221399321-4415e390-63e6-4413-a5b4-9a890cf45cc8.png)
 
