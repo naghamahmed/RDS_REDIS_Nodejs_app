@@ -84,9 +84,9 @@ $ docker exec -it acd16c7122a4 bash
 ```
 ![Screenshot from 2023-02-26 06-58-42](https://user-images.githubusercontent.com/110065223/221399321-4415e390-63e6-4413-a5b4-9a890cf45cc8.png)
 
-##In Jenkins-Master image
+In Jenkins-Master image
 
-##Copying the RDS_PASSWORD
+Copying the RDS_PASSWORD
 ```
 $ export AWS_ACCESS_KEY_ID="aws access key"
 ```
@@ -107,11 +107,11 @@ Dashboard > Manage Jenkins > Manage nodes and clouds  + Add Node
 
 ## <front size="20"> **RDS-REDIS Pipleline** </front>
 
-##Adding RDS Credentials
+Adding RDS Credentials
 
-##Adding DockerHub Credentials
+Adding DockerHub Credentials
+![Screenshot from 2023-02-26 10-25-35](https://user-images.githubusercontent.com/110065223/221400447-0fee0ef0-6df0-47b8-82ca-4b1fb9a575a4.png)
 
-![Screenshot from 2023-02-26 09-48-40](https://user-images.githubusercontent.com/110065223/221400081-60881610-a95c-497e-ba91-8b4fe58e6da0.png)
 
 ```
 $ cd ./Jenkins-App/Jenkinsfile
