@@ -1,0 +1,61 @@
+---
+# tasks file for agent
+
+- name: Apt update
+  apt:
+    update_cache: yes
+
+- name: Install pachagea
+  apt:
+    name:
+      - default-jdk
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - software-properties-common
+
+- name: Donwload Docker
+  shell: "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
+
+- name: Add specified repository
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+
+- name: Install Docker
+  apt:
+    name: docker-ce
+
+- name: start docker
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
+- name: Docker compose
+  shell: curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+
+- name: Modify Docker-compose permission
+  file:
+    path: /usr/local/bin/docker-compose
+    mode: +x
+
+- name: Add docker group to ubuntu user
+  user:
+    name: ubuntu
+    groups: docker
+    append: yes
+
+- name: Create jenkins dirctory
+  file:
+    path: /home/ubuntu/jenkins_home
+    state: directory
+    mode: "0777"
+
+- name: Add agant.jar file to jenkins wkdir
+  copy:
+    src: ./files/agent.jar
+    dest: /home/ubuntu/jenkins_home
+    owner: ubuntu
+    group: ubuntu
+    mode: "0664"

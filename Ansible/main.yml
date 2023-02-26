@@ -1,0 +1,6 @@
+- hosts: application
+  gather_facts: no
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - agent
