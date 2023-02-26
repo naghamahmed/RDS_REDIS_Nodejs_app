@@ -36,9 +36,9 @@ JENKINS
 
 Adding aws credentials in secret text 
 
-    Dashboard > Manage Jenkins > Credentials > system > Global credentials (unrestricted) + Add Credentials
+  **Dashboard > Manage Jenkins > Credentials > system > Global credentials (unrestricted) + Add Credentials**
     
-    ![Cresentials](./Images/Screenshot from 2023-02-26 09-23-41.png)
+  ![Cresentials](./Images/Screenshot from 2023-02-26 09-23-41.png)
 
 
 
