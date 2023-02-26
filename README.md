@@ -49,10 +49,12 @@ $ cat Jenkins-TF/Jenkinsfile
 ![Screenshot from 2023-02-26 09-46-19](https://user-images.githubusercontent.com/110065223/221398655-16204168-e230-4231-9457-f98e8096c762.png)
 
 ## <front size="20"> **Configuring Applicating EC2 as Jenkins-Slave** </front>
+## configuring ProxyJump
+```
+$ sudo vim ~/.ssh/config
+```
+copy the ec2 private-key in ~/.ssh
 
-```
-$ sudo vim ~/.shh/config
-```
 ```Host bastion-host
 HostName 3.76.102.157
 User ubuntu
@@ -68,6 +70,19 @@ IdentityFile ~/.ssh/key_pair.pem
 IdentitiesOnly yes
 ProxyCommand ssh bastion-host -W %h:%p
 ```
+```
+$ cd /Ansible
+```
+```
+$ ansible-playbook -i hosts main.yml
+```
+## <front size="20"> **Configuring Jenkins-Master** </front>
+![Screenshot from 2023-02-26 06-56-50](https://user-images.githubusercontent.com/110065223/221399312-6530aa0f-5099-40ef-b630-89b345148b7c.png)
+![Screenshot from 2023-02-26 06-58-42](https://user-images.githubusercontent.com/110065223/221399321-4415e390-63e6-4413-a5b4-9a890cf45cc8.png)
 
+## <front size="20"> **Jenkins Dashboard** </front>
+Dashboard > Manage Jenkins > Manage nodes and clouds  + Add Node
+![Screenshot from 2023-02-26 07-05-49](https://user-images.githubusercontent.com/110065223/221399208-7336bdda-9953-40e1-a0fc-aa3078ae9a1b.png)
+![Screenshot from 2023-02-26 07-07-01](https://user-images.githubusercontent.com/110065223/221399343-639590e2-d9a7-48b3-80aa-3e7b4c9cf21d.png)
 
 
