@@ -54,7 +54,8 @@ $ sudo vim ~/.ssh/config
 ```
 copy the ec2 private-key in ~/.ssh
 
-```Host bastion-host
+```
+Host bastion-host
 HostName <bastion public_ip>
 User ubuntu
 Port 22
