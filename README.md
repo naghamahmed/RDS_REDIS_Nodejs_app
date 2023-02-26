@@ -16,7 +16,7 @@
 ## <font size=”20”> **Jenkins Pipeline for Apply Terrraform** </font>
 
 ```
-$ cd Jenkins-TF
+$ cd ./Jenkins-TF
 ```
 ```
 $ docker build -t jenkins:v1
@@ -71,7 +71,7 @@ IdentitiesOnly yes
 ProxyCommand ssh bastion-host -W %h:%p
 ```
 ```
-$ cd /Ansible
+$ cd ./Ansible
 ```
 ```
 $ ansible-playbook -i hosts main.yml
