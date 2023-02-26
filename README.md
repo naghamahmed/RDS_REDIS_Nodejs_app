@@ -33,6 +33,7 @@ http://localhost:8080
 ```
 ## <front size="20"> **configuring AWS on Jenkins** </front>
 JENKINS
+
 Adding aws credentials in secret text 
 
     Dashboard > Manage Jenkins > Credentials > system > Global credentials (unrestricted) + Add Credentials
