@@ -46,9 +46,28 @@ $ cat Jenkins-TF/Jenkinsfile
 ```
 ![Screenshot from 2023-02-26 09-46-19](https://user-images.githubusercontent.com/110065223/221398556-a7ad9b22-48cc-4c66-92b0-fccf0021ab8c.png)
 
+![Screenshot from 2023-02-26 09-46-19](https://user-images.githubusercontent.com/110065223/221398655-16204168-e230-4231-9457-f98e8096c762.png)
 
+## <front size="20"> **Configuring Applicating EC2 as Jenkins-Slave** </front>
 
+```
+$ sudo vim ~/.shh/config
+```
+```Host bastion-host
+HostName 3.76.102.157
+User ubuntu
+Port 22
+IdentityFile ~/.ssh/key_pair.pem
+IdentitiesOnly yes
 
+Host application
+HostName 10.0.3.99
+User ubuntu
+Port 22
+IdentityFile ~/.ssh/key_pair.pem
+IdentitiesOnly yes
+ProxyCommand ssh bastion-host -W %h:%p
+```
 
 
 
