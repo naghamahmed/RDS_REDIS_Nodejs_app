@@ -1,7 +1,7 @@
 ## <font size=”20”> **RDS_REDIS_Nodejs_app** </font>
 ## <font size=”20”> **Provision AWS Infrastructure using Terraform** </font>
 
-- vpc
+- VPC
 - INTERNET-GATEWAY
 - 2 public subnet
 - 2 private subnet
