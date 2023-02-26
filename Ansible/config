@@ -1,0 +1,14 @@
+Host bastion-host
+HostName 3.76.102.157
+User ubuntu
+Port 22
+IdentityFile ~/.ssh/key_pair.pem
+IdentitiesOnly yes
+
+Host application
+HostName 10.0.3.99
+User ubuntu
+Port 22
+IdentityFile ~/.ssh/key_pair.pem
+IdentitiesOnly yes
+ProxyCommand ssh bastion-host -W %h:%p
