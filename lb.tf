@@ -32,8 +32,10 @@ resource "aws_lb_target_group" "lb_App_tg" {
   port     = 3000
   protocol = "HTTP"
   vpc_id   = module.network.vpc_id
-  path     = "/redis"
 
+  health_check {
+    path   = "/redis"
+  }
 
 }
 
