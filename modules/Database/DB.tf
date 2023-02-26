@@ -68,9 +68,9 @@ resource "random_password" "password" {
   special          = true
   override_special = "!#$%&*()-_=+[]{}<>:?"
 
-  provisioner "local-exec" {
-    command = "export PASSWORD=${random_password.password.result}"
-  }
+#   provisioner "local-exec" {
+#     command = "export PASSWORD=${random_password.password.result}"
+#   }
 }
 
 #create RDS mysql_db
