@@ -1,4 +1,9 @@
 ## <font size=”20”> **RDS_REDIS_Nodejs_app** </font>
+
+Applying the terraform code using jenkins pipeline with mysqldb and redis in the private subnets,
+then configure the private EC2 (Application) with ansible as jenkins-slave,
+deploy nodejs-app pipeline on the jenkins-slave (Application) and exposing the application with ALB.
+
 ## <font size=”20”> **Provision AWS Infrastructure using Terraform** </font>
 
 - VPC
