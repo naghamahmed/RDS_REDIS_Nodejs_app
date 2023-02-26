@@ -13,7 +13,7 @@
 - ALB
 
 
-## <font size=”20”> **Jenkins Pipeline for Aplly Terrraform** </font>
+## <font size=”20”> **Jenkins Pipeline for Apply Terrraform** </font>
 
 ```
 $ cd Jenkins-TF
@@ -24,4 +24,18 @@ $ docker build -t jenkins:v1
 ```
 $ docker run -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker
 ```
+
+## <front size="20"> **Jenkins Master** </front>
+
+BROWSER
+```
+http://localhost:8080
+```
+## <front size="20"> **configuring AWS on Jenkins** </front>
+JENKINS
+Adding aws credentials in secret text 
+    Dashboard > Manage Jenkins > Credentials > system > Global credentials (unrestricted) + Add Credentials
+    ![Images](Screenshot from 2023-02-26 09-23-41.png)
+
+
 
