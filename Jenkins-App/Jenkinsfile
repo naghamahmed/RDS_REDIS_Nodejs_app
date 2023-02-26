@@ -1,0 +1,42 @@
+pipeline {
+    agent {
+     label  'application' 
+    }
+    
+    stages {
+        
+        stage('Git check') {
+            steps {
+                echo' -----GIT-----'
+                git branch: 'rds_redis', credentialsId: 'github-token', url: 'https://github.com/naghamahmed/jenkins_nodejs_example.git'
+            }
+        }
+        
+        stage('dockerhub login') {
+            steps {
+                echo' -----DOCKERHUB-----'
+                withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+                    sh"docker login -u $USERNAME -p $PASSWORD"
+                    
+                }
+            }
+        }
+        
+        
+        // stage('Build image') {  
+        //     steps {
+        //         sh 'echo -----BUILD------'
+        //         sh 'docker build -t naghamahmed/nodejs_app .'
+        //     }
+        // }
+        
+        stage('Run container') {  
+            steps {
+                echo'-----Container-----'
+                withCredentials([usernamePassword(credentialsId: 'RDS_credential', passwordVariable: 'RDS_PASSWORD', usernameVariable: 'RDS_USERNAME')]) {
+                    sh"docker run -d -p 3000:3000 -e RDS_USERNAME=${RDS_USERNAME} -e RDS_PASSWORD=${RDS_PASSWORD} -e RDS_HOSTNAME=rds-new.cpwdpvyzyp1g.eu-central-1.rds.amazonaws.com -e RDS_PORT=3306 -e REDIS_HOSTNAME=cluster.3tr4ck.0001.euc1.cache.amazonaws.com -e REDIS_PORT=6379 naghamahmed/nodejs_app"
+                }
+            }
+        } 
+    }
+}
