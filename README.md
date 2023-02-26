@@ -45,8 +45,7 @@ Adding AWS credentials in secret text
 $ cat Jenkins-TF/Jenkinsfile
 ```
 ![Screenshot from 2023-02-26 09-46-19](https://user-images.githubusercontent.com/110065223/221398556-a7ad9b22-48cc-4c66-92b0-fccf0021ab8c.png)
-
-![Screenshot from 2023-02-26 09-46-19](https://user-images.githubusercontent.com/110065223/221398655-16204168-e230-4231-9457-f98e8096c762.png)
+![Screenshot from 2023-02-26 09-48-40](https://user-images.githubusercontent.com/110065223/221399412-0e26d83f-5785-494a-8e52-bc453495d5dd.png)
 
 ## <front size="20"> **Configuring Applicating EC2 as Jenkins-Slave** </front>
 ## configuring ProxyJump
@@ -78,6 +77,11 @@ $ ansible-playbook -i hosts main.yml
 ```
 ## <front size="20"> **Configuring Jenkins-Master** </front>
 ![Screenshot from 2023-02-26 06-56-50](https://user-images.githubusercontent.com/110065223/221399312-6530aa0f-5099-40ef-b630-89b345148b7c.png)
+
+Exec to the jenkins master image 
+```
+$ docker exec -it acd16c7122a4 bash
+```
 ![Screenshot from 2023-02-26 06-58-42](https://user-images.githubusercontent.com/110065223/221399321-4415e390-63e6-4413-a5b4-9a890cf45cc8.png)
 
 ## <front size="20"> **Jenkins Dashboard** </front>
