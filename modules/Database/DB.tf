@@ -65,8 +65,6 @@ resource "aws_db_subnet_group" "database_subnet_group" {
 
 resource "random_password" "password" {
   length           = 16
-  special          = true
-  override_special = "!#$%&*-_=+<>:?"
 
 #   provisioner "local-exec" {
 #     command = "export PASSWORD=${random_password.password.result}"
@@ -90,9 +88,9 @@ resource "aws_db_instance" "rds" {
   db_subnet_group_name   = aws_db_subnet_group.database_subnet_group.name
   vpc_security_group_ids = ["${aws_security_group.rds_security_group.id}"]
   
-  provisioner "local-exec" {
-    command = "export RDS_HOSTNAME=${self.address}"
-  }
+  #provisioner "local-exec" {
+  #  command = "export RDS_HOSTNAME=${self.address}"
+  #}
 }
 
 
@@ -115,8 +113,8 @@ resource "aws_elasticache_cluster" "elasticashe" {
   availability_zone    = var.AZ
   subnet_group_name    = aws_elasticache_subnet_group.redis_subnet.name
 
-  provisioner "local-exec"{
-    command = "export REDIS_HOSTAME=${self.cache_nodes.0.address}"
-  }
+  #provisioner "local-exec"{
+  #  command = "export REDIS_HOSTAME=${self.cache_nodes.0.address}"
+  #}
 
 }
