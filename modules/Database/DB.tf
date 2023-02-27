@@ -66,7 +66,7 @@ resource "aws_db_subnet_group" "database_subnet_group" {
 resource "random_password" "password" {
   length           = 16
   special          = true
-  override_special = "!#$%&*()-_=+[]{}<>:?"
+  override_special = "!#$%&*-_=+<>:?"
 
 #   provisioner "local-exec" {
 #     command = "export PASSWORD=${random_password.password.result}"
