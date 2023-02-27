@@ -53,7 +53,7 @@ $ cat Jenkins-TF/Jenkinsfile
 ![Screenshot from 2023-02-26 09-48-40](https://user-images.githubusercontent.com/110065223/221399412-0e26d83f-5785-494a-8e52-bc453495d5dd.png)
 
 ## <front size="20"> **Configuring Applicating EC2 as Jenkins-Slave** </front>
-## configuring ProxyJump
+## Configuring ProxyJump
 ```
 $ sudo vim ~/.ssh/config
 ```
@@ -107,6 +107,12 @@ Add DockerHub Credentials
 ```
 $ cd ./Jenkins-App/Jenkinsfile
 ```
+Github App Repo
+
+```
+https://github.com/naghamahmed/jenkins_nodejs_example/tree/rds_redis
+```
+
 ![Screenshot from 2023-02-26 09-48-40](https://user-images.githubusercontent.com/110065223/221400160-7ca1edcd-ea3c-45e8-a3df-be1267be7e04.png)
 
 ## <front size="20"> **Expose the app using ALB** </front>
