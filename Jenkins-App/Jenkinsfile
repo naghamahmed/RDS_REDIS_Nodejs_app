@@ -23,12 +23,12 @@ pipeline {
         }
         
         
-        // stage('Build image') {  
-        //     steps {
-        //         sh 'echo -----BUILD------'
-        //         sh 'docker build -t naghamahmed/nodejs_app .'
-        //     }
-        // }
+        stage('Build image') {  
+            steps {
+                echo'-----BUILD-----'
+                sh 'docker build -t naghamahmed/nodejs_app .'
+            }
+        }
         
         stage('Run container') {  
             steps {
