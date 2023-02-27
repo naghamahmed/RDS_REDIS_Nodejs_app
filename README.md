@@ -90,22 +90,6 @@ $ docker exec -it $container_id bash
 ```
 ![Screenshot from 2023-02-26 06-58-42](https://user-images.githubusercontent.com/110065223/221399321-4415e390-63e6-4413-a5b4-9a890cf45cc8.png)
 
-In Jenkins-Master image
-
-Copying the RDS_PASSWORD
-```
-$ export AWS_ACCESS_KEY_ID="aws access key"
-```
-```
-$ export AWS_ACCESS_SECRET_KEY_ID="aws secret key"
-```
-```
-$ cd /var/jenkins_home/workspace/Database/
-```
-```
-$ terraform output RDS_PASSWORD
-```
-
 ## <front size="20"> **Jenkins Dashboard** </front>
 Dashboard > Manage Jenkins > Manage nodes and clouds  + Add Node
 ![Screenshot from 2023-02-26 07-05-49](https://user-images.githubusercontent.com/110065223/221399208-7336bdda-9953-40e1-a0fc-aa3078ae9a1b.png)
@@ -113,10 +97,11 @@ Dashboard > Manage Jenkins > Manage nodes and clouds  + Add Node
 
 ## <front size="20"> **RDS-REDIS Pipleline** </front>
 
-Adding RDS Credentials
+Install "Pipeline: AWS Steps" to allow jenkins pipeline steps interact with AWS APIs.
+![Screenshot from 2023-02-27 08-58-23](https://user-images.githubusercontent.com/110065223/221495972-83d53bc1-0a62-46f4-9278-d388aec6fa59.png)
 
-Adding DockerHub Credentials
-![Screenshot from 2023-02-26 10-25-35](https://user-images.githubusercontent.com/110065223/221400447-0fee0ef0-6df0-47b8-82ca-4b1fb9a575a4.png)
+Add DockerHub Credentials
+![Screenshot from 2023-02-27 09-03-48](https://user-images.githubusercontent.com/110065223/221496385-cc60fdeb-3f68-4c0b-983a-01d960ec137d.png)
 
 
 ```
