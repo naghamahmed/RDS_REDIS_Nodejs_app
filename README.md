@@ -107,11 +107,10 @@ Add DockerHub Credentials
 ```
 $ cd ./Jenkins-App/Jenkinsfile
 ```
-Github App Repo
 
-```
-https://github.com/naghamahmed/jenkins_nodejs_example/tree/rds_redis
-```
+
+[Github App Repo](https://github.com/naghamahmed/jenkins_nodejs_example/tree/rds_redis)
+
 
 ![Screenshot from 2023-02-26 09-48-40](https://user-images.githubusercontent.com/110065223/221400160-7ca1edcd-ea3c-45e8-a3df-be1267be7e04.png)
 
